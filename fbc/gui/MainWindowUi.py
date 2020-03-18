@@ -18,6 +18,13 @@ class Ui(QtWidgets.QMainWindow):
     def enable(self, flag):
         self.btn_add.setEnabled(flag)
         self.btn_delete.setEnabled(flag)
-        self.btn_start.setEnabled(flag)
         self.tblw_posts.setEnabled(flag)
         self.cb_hide_browser.setEnabled(flag)
+
+    def remove_contain_str(self, str):
+        row_count = self.tblw_posts.rowCount()
+        for row in range(row_count):
+            post = self.tblw_posts.item(row, 0).text()
+            if (str in post):
+                self.tblw_posts.removeRow(row)
+                return

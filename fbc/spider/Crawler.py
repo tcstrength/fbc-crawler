@@ -1,6 +1,4 @@
 from fbc import Driver
-from fbc import Utils
-from requests import Request, Session
 import time
 
 class Crawler():
