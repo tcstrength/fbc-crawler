@@ -35,7 +35,7 @@ class MainWindow():
 
     def crawl_thread_error(self, msg, post):
         self.error_found = True
-        MsgBox("May be wrong post id: " + post, str(msg))
+        MsgBox("Something went wrong: " + post, str(msg))
 
     def crawl_thread_finished(self):
         self.ui.enable(True)
@@ -55,7 +55,7 @@ class MainWindow():
     def ui_btn_add_clicked(self):
         row = self.ui.tblw_posts.rowCount()
         self.ui.tblw_posts.insertRow(row)
-        self.ui.tblw_posts.setItem(row, 0, QtWidgets.QTableWidgetItem(""))
+        self.ui.tblw_posts.setItem(row, 0, QtWidgets.QTableWidgetItem("10157605188437217"))
 
     def ui_btn_delete_clicked(self):
         idx = self.ui.tblw_posts.selectedIndexes()
