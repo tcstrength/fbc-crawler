@@ -24,4 +24,5 @@ class CrawlThread(QtCore.QThread):
                     self.count += cmt.count('\n')
                 self.one_crawled.emit(post)
             except Exception as e:
+                print(e)
                 self.error.emit(e, post)

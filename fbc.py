@@ -6,7 +6,7 @@ import sys
 
 try:
     app = QtWidgets.QApplication(sys.argv)
-    # app.setStyle("fusion")
+    app.setStyle("fusion")
     win = MainWindow()
     win.ui.show()
     app.exec_()
